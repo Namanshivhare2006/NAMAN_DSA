@@ -5,7 +5,7 @@ class Solution {
         Queue<Integer> sq = new LinkedList<>();
         vis[0] = true;
         sq.add(0);
-        while(sq.size()>0){
+        while(!sq.isEmpty()){
             int curr = sq.poll();
             for(int neb : rooms.get(curr)){
                 if(!vis[neb]){
