@@ -5,9 +5,19 @@
 //         return (n%2==0) && isPowerOfTwo(n/2);
 //     }
 // }
+// class Solution {
+//     public boolean isPowerOfTwo(int n){
+//         if(n<=0) return false;
+//         return (n & (n - 1)) == 0;
+//     }
+// }
 class Solution {
     public boolean isPowerOfTwo(int n){
-        if(n<=0) return false;
-        return (n & (n - 1)) == 0;
+        if(n <= 0) return false;   // 🔥 important fix
+        while(n > 1){
+            if(n % 2 == 1) return false;
+            n /= 2;
+        }
+        return true;
     }
 }
