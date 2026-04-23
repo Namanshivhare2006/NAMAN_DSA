@@ -11,7 +11,7 @@ class Solution {
             else{
                 break;
             }
-            
+        //    ram was kfhndahnkdajhhmnfuiiu 
         }
         return index==0?"":str1.substring(0,index);
         
