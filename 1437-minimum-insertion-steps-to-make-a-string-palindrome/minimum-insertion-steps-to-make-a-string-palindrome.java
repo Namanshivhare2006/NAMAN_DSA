@@ -26,7 +26,7 @@ class Solution {
         if(i>=j) return 0;
 
         if(dp[i][j]!=-1) return dp[i][j];
-        if(s.charAt(i)==s.charAt(j)) return solve(s,i+1,j-1,dp);
+        if(s.charAt(i)==s.charAt(j)) return dp[i][j] = solve(s,i+1,j-1,dp);
         return dp[i][j] = 1 + Math.min(solve(s,i+1,j,dp), solve(s,i,j-1,dp));
     }
 }
